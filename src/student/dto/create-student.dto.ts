@@ -1,8 +1,9 @@
-import { IsNumber, IsString } from 'class-validator'
+import { IsNumber, IsOptional, IsString } from 'class-validator'
 
 export class CreateStudentDto {
 
     @IsNumber()
+    @IsOptional()
     idCourse: number;
 
     @IsString()
@@ -15,6 +16,7 @@ export class CreateStudentDto {
     age: number;
 
     @IsString()
+    @IsOptional()
     address: string;
 
 }
