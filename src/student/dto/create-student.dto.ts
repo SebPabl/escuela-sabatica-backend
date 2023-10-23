@@ -16,5 +16,5 @@ export class CreateStudentDto {
 
     @IsString()
     address: string;
-    
+
 }

@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { CourseModule } from './course/course.module';
 import { StudentModule } from './student/student.module';
+import { TeacherModule } from './teacher/teacher.module';
 
 @Module({
   imports: [ ConfigModule.forRoot(),
@@ -20,7 +21,8 @@ import { StudentModule } from './student/student.module';
     options: { trustServerCertificate: true },   
   }),
     CourseModule,
-    StudentModule,],
+    StudentModule,
+    TeacherModule,],
   controllers: [AppController],
   providers: [AppService],
 })

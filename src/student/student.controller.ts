@@ -5,7 +5,7 @@ import { UpdateStudentDto } from './dto/update-student.dto';
 
 @Controller('student')
 export class StudentController {
-    constructor( private readonly studentService: StudentService) {}
+    constructor(private readonly studentService: StudentService) { }
 
     @Post()
     create(@Body() createStudentDto: CreateStudentDto) {
@@ -13,7 +13,7 @@ export class StudentController {
     }
 
     @Get()
-    findAll(){
+    findAll() {
         return this.studentService.findAll()
     }
 
@@ -23,7 +23,7 @@ export class StudentController {
     }
 
     @Put(':id')
-    update(@Param('id') id: number, updateStudentDto: UpdateStudentDto){
+    update(@Param('id') id: number, updateStudentDto: UpdateStudentDto) {
         return this.studentService.update(id, updateStudentDto)
     }
 
