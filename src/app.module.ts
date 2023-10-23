@@ -6,10 +6,11 @@ import { ConfigModule } from '@nestjs/config';
 import { CourseModule } from './course/course.module';
 import { StudentModule } from './student/student.module';
 import { TeacherModule } from './teacher/teacher.module';
+import { AssistanceModule } from './assistance/assistance.module';
 
 @Module({
-  imports: [ ConfigModule.forRoot(),
-    TypeOrmModule.forRoot({
+  imports: [ConfigModule.forRoot(),
+  TypeOrmModule.forRoot({
     type: 'mssql',
     host: 'localhost',
     port: parseInt(process.env.DB_PORT),
@@ -18,12 +19,13 @@ import { TeacherModule } from './teacher/teacher.module';
     database: 'EscuelaSabatica',
     autoLoadEntities: true,
     synchronize: true,
-    options: { trustServerCertificate: true },   
+    options: { trustServerCertificate: true },
   }),
     CourseModule,
     StudentModule,
-    TeacherModule,],
+    TeacherModule,
+    AssistanceModule,],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
