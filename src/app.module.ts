@@ -7,6 +7,7 @@ import { CourseModule } from './course/course.module';
 import { StudentModule } from './student/student.module';
 import { TeacherModule } from './teacher/teacher.module';
 import { AssistanceModule } from './assistance/assistance.module';
+import { OfferingModule } from './offering/offering.module';
 
 @Module({
   imports: [ConfigModule.forRoot(),
@@ -24,7 +25,8 @@ import { AssistanceModule } from './assistance/assistance.module';
     CourseModule,
     StudentModule,
     TeacherModule,
-    AssistanceModule,],
+    AssistanceModule,
+    OfferingModule,],
   controllers: [AppController],
   providers: [AppService],
 })
