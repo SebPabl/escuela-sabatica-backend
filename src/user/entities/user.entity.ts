@@ -5,21 +5,9 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ unique: true, nullable: true })
+    @Column({ unique: true })
     username: string;
-
-    @Column({ unique: true, nullable: true })
-    email: string;
 
     @Column()
     password: string;
-
-    @Column({ nullable: true })
-    state: Date;
-
-    @Column({ nullable: true })
-    authAt: Date;
-
-    @DeleteDateColumn()
-    deleteAt: Date;
 }

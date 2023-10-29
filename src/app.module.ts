@@ -8,8 +8,8 @@ import { StudentModule } from './student/student.module';
 import { TeacherModule } from './teacher/teacher.module';
 import { AssistanceModule } from './assistance/assistance.module';
 import { OfferingModule } from './offering/offering.module';
-import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
+import { LoginModule } from './login/login.module';
 
 @Module({
   imports: [ConfigModule.forRoot(),
@@ -29,8 +29,8 @@ import { UserModule } from './user/user.module';
     TeacherModule,
     AssistanceModule,
     OfferingModule,
-    AuthModule,
-    UserModule,],
+    UserModule,
+    LoginModule,],
   controllers: [AppController],
   providers: [AppService],
 })

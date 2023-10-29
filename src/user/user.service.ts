@@ -13,8 +13,8 @@ export class UserService {
   ) { }
 
   async create(userInterface: UserInterface) {
-    const { id, email, username } = await this.userRepository.save(userInterface);
-    return { id, email, username };
+    const user = this.userRepository.create(userInterface);
+    return await this.userRepository.save(user);
   }
 
   async findByUsername(username: string) {
